@@ -62,7 +62,7 @@ class PlayList {
     public String toString() {
         String list = "";
         for (int i = 0; i < size; i++) {
-            list += tracks[i].toString();
+            list += tracks[i].toString() + "\n";
         }
         return list;
     }
