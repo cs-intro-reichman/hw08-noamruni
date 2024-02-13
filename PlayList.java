@@ -61,7 +61,8 @@ class PlayList {
     //// For an efficient implementation, use StringBuilder.
     public String toString() {
         String list = "";
-        for (int i = 0; i < size; i++) {
+
+        for (int i = 0; i < this.size; i++) {
             list += tracks[i].toString() + "\n";
         }
         return "";
