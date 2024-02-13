@@ -60,12 +60,12 @@ class PlayList {
      */
     //// For an efficient implementation, use StringBuilder.
     public String toString() {
-        String list = "";
-
-        for (int i = 0; i < this.size; i++) {
-            list += tracks[i].toString() + "\n";
+        StringBuilder tracksData = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            tracksData.append("\n").append(tracks[i].toString());
         }
-        return "";
+
+        return tracksData.toString();
     }
 
     /**
@@ -93,6 +93,7 @@ class PlayList {
      * If such a track is not found, returns -1.
      */
     public int indexOf(String title) {
+        title = title.toLowerCase();
         for (int i = 0; i < this.size; i++) {
             if (tracks[i].getTitle().equals(title)) {
                 return i;
