@@ -109,7 +109,7 @@ class PlayList {
      * returns true.
      */
     public boolean add(int i, Track track) {
-        if (i >= this.maxSize || i < 0) {
+        if (i > this.maxSize || i < 0 || this.size == this.maxSize) {
             return false;
         }
         if (i == this.size) {
