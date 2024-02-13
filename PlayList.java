@@ -133,7 +133,7 @@ class PlayList {
      * does nothing and returns -1.
      */
     public void remove(int i) {
-        if (i < 0 || this.size == 0 || i > this.maxSize) {
+        if (i < 0 || this.size == 0 || i > this.size) {
             return;
         }
         for (int j = i; j < this.size; j++) {
